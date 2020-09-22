@@ -15,5 +15,14 @@ namespace TritonMonitor
         {
             InitializeComponent();
         }
+
+        private void FrmConfiguracion_Load(object sender, EventArgs e)
+        {
+            // MessageBox.Show(printDocument.pr);
+            foreach (string printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters) {
+                //MessageBox.Show(printer); 
+                cmbPrinter.Items.Add(printer);
+            }
+        }
     }
 }

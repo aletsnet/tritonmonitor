@@ -1,1 +1,25 @@
-﻿
+﻿{
+  "configure" : { "printer": "",
+                  "webapi" : "localhost",
+                  "user" : "",
+                  "pass" : "",
+                  "default" : ""
+                },
+  "ticket" : {
+                "id_ticket" : 0,
+                "title": "",
+                "time" : "",
+                "id_user" : 0,
+                "user" : "",
+                "username" : "",
+                "description" : "",
+                "reprinter" : 0,
+                "time_reprinter" : ""
+  },
+  "elements" : {
+                "id_elements" : 0,
+                "id_ticket" : 0,
+                "elemento": "",
+                "description" : "",
+                "count" : 0,}
+}

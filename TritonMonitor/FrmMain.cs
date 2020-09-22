@@ -15,5 +15,16 @@ namespace TritonMonitor
         {
             InitializeComponent();
         }
+
+        private void btnConfigurar_Click(object sender, EventArgs e)
+        {
+            Form frm = new FrmConfiguracion();
+            frm.ShowDialog();
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

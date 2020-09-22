@@ -33,12 +33,14 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.gpLista = new System.Windows.Forms.GroupBox();
             this.lvLista = new System.Windows.Forms.ListView();
+            this.lStatusTicket = new System.Windows.Forms.Label();
             this.gpMenu.SuspendLayout();
             this.gpLista.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpMenu
             // 
+            this.gpMenu.Controls.Add(this.lStatusTicket);
             this.gpMenu.Controls.Add(this.btnConfigurar);
             this.gpMenu.Controls.Add(this.btnActualizar);
             this.gpMenu.Location = new System.Drawing.Point(12, 12);
@@ -55,6 +57,7 @@
             this.btnConfigurar.TabIndex = 1;
             this.btnConfigurar.Text = "Configurar";
             this.btnConfigurar.UseVisualStyleBackColor = true;
+            this.btnConfigurar.Click += new System.EventHandler(this.btnConfigurar_Click);
             // 
             // btnActualizar
             // 
@@ -88,6 +91,15 @@
             this.lvLista.TabIndex = 0;
             this.lvLista.UseCompatibleStateImageBehavior = false;
             // 
+            // lStatusTicket
+            // 
+            this.lStatusTicket.AutoSize = true;
+            this.lStatusTicket.Location = new System.Drawing.Point(15, 25);
+            this.lStatusTicket.Name = "lStatusTicket";
+            this.lStatusTicket.Size = new System.Drawing.Size(55, 13);
+            this.lStatusTicket.TabIndex = 2;
+            this.lStatusTicket.Text = "En espera";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,8 +108,10 @@
             this.Controls.Add(this.gpLista);
             this.Controls.Add(this.gpMenu);
             this.Name = "FrmMain";
-            this.Text = "Form1";
+            this.Text = "TritonMonito";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.gpMenu.ResumeLayout(false);
+            this.gpMenu.PerformLayout();
             this.gpLista.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -110,6 +124,7 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.GroupBox gpLista;
         private System.Windows.Forms.ListView lvLista;
+        private System.Windows.Forms.Label lStatusTicket;
     }
 }
 
