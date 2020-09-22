@@ -24,7 +24,23 @@ namespace TritonMonitor
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-
+            // valida base de datos
+            Conect database = new Conect();
+            DataRow row = database.Row("SELECT count(*) nrows FROM sqlite_master WHERE type ='table' AND name NOT LIKE 'sqlite_%' ");
+            if (row != null) {
+                if (row["nrows"].ToString() != "")
+                {
+                    MessageBox.Show("Hay elementos");
+                }
+                else
+                {
+                    MessageBox.Show("No hay elementos");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Problemas al crear estrutura local");
+            }
         }
     }
 }
